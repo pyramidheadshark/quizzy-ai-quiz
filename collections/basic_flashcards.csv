@@ -1,0 +1,4 @@
+type,question,correct_answer,options
+"text","Что такое CSS?","Язык стилей",""
+"single","Какой из этих языков не является языком программирования?","HTML","Python,JAVA,HTML,C++"
+"multi","Какие из этих языков являются компилируемыми?","JAVA,C++","Python,JAVA,C++,JavaScript"
