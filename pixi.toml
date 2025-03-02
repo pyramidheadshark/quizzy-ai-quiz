@@ -8,4 +8,7 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-python = "3.10.*"
+python = "3.11.*"
+
+[pypi-dependencies]
+nicegui = ">=2.11.1, <3"
