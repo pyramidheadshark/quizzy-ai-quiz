@@ -1,0 +1,11 @@
+[project]
+authors = ["pyramidheadshark <pyramidheadshark@gmail.com>"]
+channels = ["conda-forge"]
+name = "i-hate-my-life-and-quizlet"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.10.*"
