@@ -26,8 +26,8 @@ def update_card_content(card_container, correct_count_label, incorrect_count_lab
                 ui.label(f"Коллекция '{current_collection}' завершена! 🎉").classes('text-2xl font-bold mb-4 text-gray-800 dark:text-white')
                 ui.label(f"Правильно: {correct_count}, Неправильно: {incorrect_count}").classes('text-lg mb-6 text-gray-800 dark:text-white')
                 if incorrect_cards:
-                    ui.button('Пройти ошибки заново', on_click=lambda: retry_incorrect_cards_ui(card_container, correct_count_label, incorrect_count_label, remaining_label)).classes('bg-blue-500 text-white w-1/3 mx-auto py-2 mb-4') # Use ui function
-                ui.button('Пройти коллекцию заново', on_click=lambda: restart_collection_ui(card_container, correct_count_label, incorrect_count_label, remaining_label)).classes('bg-blue-500 text-white w-1/3 mx-auto py-2 mb-4') # Use ui function
+                    ui.button('Пройти ошибки заново', on_click=lambda: retry_incorrect_cards_ui(card_container, correct_count_label, incorrect_count_label, remaining_label, update_card_content)).classes('bg-blue-500 text-white w-1/3 mx-auto py-2 mb-4') # Use ui function
+                ui.button('Пройти коллекцию заново', on_click=lambda: restart_collection_ui(card_container, correct_count_label, incorrect_count_label, remaining_label, update_card_content)).classes('bg-blue-500 text-white w-1/3 mx-auto py-2 mb-4') # Use ui function
         return
 
     card = flashcards[current_card_index]

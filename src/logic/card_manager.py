@@ -7,7 +7,7 @@ from logic.state_manager import current_collection
 def import_flashcards_from_csv(file_path):
     flashcards = []
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
+        with open(file_path, "r", encoding="utf-8-sig") as f: # Changed encoding to utf-8-sig
             reader = csv.DictReader(f)
             required_columns = {"type", "question", "correct_answer"}
             if not required_columns.issubset(reader.fieldnames):
@@ -15,15 +15,29 @@ def import_flashcards_from_csv(file_path):
                 ui.notify(f"Ошибка в файле {os.path.basename(file_path)}: отсутствуют колонки {missing}", type='negative')
                 return []
             for row in reader:
+                print(f"Processing row: {row}") # Вывод текущей строки
+                type_val = row["type"]
+                question_val = row["question"]
+                correct_answer_str = row["correct_answer"]
+                options_str = row.get("options", "")
+                print(f"  type_val: {type_val}, question_val: {question_val}, correct_answer_str: {correct_answer_str}, options_str: {options_str}") # Вывод значений переменных
+
+                correct_answer_val = correct_answer_str.split(",") if "," in correct_answer_str else correct_answer_str
+                options_val = options_str.split(",") if options_str else []
+                print(f"  correct_answer_val: {correct_answer_val}, options_val: {options_val}") # Вывод значений после split
+
                 card = {
-                    "type": row["type"],
-                    "question": row["question"],
-                    "correct_answer": row["correct_answer"].split(",") if "," in row["correct_answer"] else row["correct_answer"],
-                    "options": row.get("options", "").split(",") if row.get("options", "") else []
+                    "type": type_val,
+                    "question": question_val,
+                    "correct_answer": correct_answer_val,
+                    "options": options_val
                 }
+                print(f"  card object created: {card}") # Вывод созданного объекта card
                 flashcards.append(card)
+                print("  Card appended to flashcards list") # Подтверждение добавления в список
             return flashcards
     except Exception as e:
+        print(f"Exception: {e}") # Debug output: print exception
         ui.notify(f"Не удалось загрузить файл {os.path.basename(file_path)}: {str(e)}", type='negative')
         return []
 
