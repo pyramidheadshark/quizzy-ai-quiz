@@ -1,4 +1,0 @@
-type,question,correct_answer,options
-"text","Что такое селектор в CSS?","Правило для выбора HTML элементов для стилизации",""
-"single","Какой тег используется для создания ссылки в HTML?","<a>","<p>,<a>,<h1>,<div>"
-"multi","Какие CSS свойства отвечают за управление отступами?","padding,margin","border,font-size,padding,margin"
