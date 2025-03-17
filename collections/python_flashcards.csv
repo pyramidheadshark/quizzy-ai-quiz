@@ -1,4 +1,0 @@
-type,question,correct_answer,options
-"text","Что такое list comprehension в Python?","Компактный способ создания списков",""
-"single","Какая функция используется для чтения файла в Python?","open()","read(),open(),file(),load()"
-"multi","Какие типы данных являются изменяемыми в Python?","list,dict","int,str,tuple,list,dict"
