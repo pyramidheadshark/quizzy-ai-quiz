@@ -42,8 +42,8 @@
 ### Шаги
 1. **Клонируйте репозиторий**:
    ```
-   git clone https://github.com/pyramidheadshark/i-hate-my-life-and-quizlet.git
-   cd i-hate-my-life-and-quizlet
+   git clone https://github.com/pyramidheadshark/quizzy-ai-quiz.git
+   cd quizzy-ai-quiz
    ```
 
 2. **Создайте виртуальное окружение** (опционально, но рекомендуется):
@@ -155,5 +155,5 @@ quiz-generator/
 ## Контакты
 
 Если у вас есть вопросы или предложения:
-- **GitHub Issues**: [Создать задачу](https://github.com/pyramidheadshark/i-hate-my-life-and-quizlet/issues)
+- **GitHub Issues**: [Создать задачу](https://github.com/pyramidheadshark/quizzy-ai-quiz/issues)
 
